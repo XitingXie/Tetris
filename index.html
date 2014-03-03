@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+
+<head> 
+	<title>Tetris Game</title>
+
+	<script src = "jquery-1.10.2.min.js"></script>
+	<script src = "func.js" ></script>	
+	<script src = "jquery.mobile-1.4.0.min.js"></script>
+
+	<meta name="viewport" content="width=device-width, height=device-height">
+	<link rel = "stylesheet" type="text/css" href="mystyle.css">
+	<link rel = "stylesheet" href="jquery.mobile-1.4.0.min.css">
+	<script>
+		$(document).on("pageinit","#pageone",function(){
+		  $("#baseBlocks").on("swipeleft",function(){
+	  		if(isMoveLeft())
+	  		{
+	  			clearMovingBlocks();
+	  			moveLeft();
+	  			drawMovingBlocks();	
+	  		}
+		  });                       
+		});
+	
+		$(document).on("pageinit","#pageone",function(){
+		  $("#baseBlocks").on("swiperight",function(){
+	  		if(isMoveRight())
+	  		{
+	  			clearMovingBlocks();
+	  			moveRight();
+	  			drawMovingBlocks();	
+	  		}
+		  });                       
+		});
+	
+		$(document).on("pageinit","#pageone",function(){
+		  $("#baseBlocks").on("tap",function(){
+	  		if(isRotateOK())
+	  		{
+	  			clearMovingBlocks();
+	  			rotateMovingBlocks();
+	  			drawMovingBlocks();			
+	  		}
+		  });                       
+		});	
+	</script>	
+</head>
+
+<body onload="init()">
+	<!--h1>Tetris</h1-->
+<div data-role="page" id="pageone">	
+	<canvas id = "baseBlocks">	
+				
+	</canvas>
+</div>
+
+<!--script>
+	$(document).on("pageinit","#pageone",function(){
+	  $("#baseBlocks").on("swipeleft",function(){
+  		if(isMoveLeft())
+  		{
+  			clearMovingBlocks();
+  			moveLeft();
+  			drawMovingBlocks();	
+  		}
+	  });                       
+	});
+	
+	$(document).on("pageinit","#pageone",function(){
+	  $("#baseBlocks").on("swiperight",function(){
+  		if(isMoveRight())
+  		{
+  			clearMovingBlocks();
+  			moveRight();
+  			drawMovingBlocks();	
+  		}
+	  });                       
+	});
+	
+	$(document).on("pageinit","#pageone",function(){
+	  $("#baseBlocks").on("tap",function(){
+  		if(isRotateOK())
+  		{
+  			clearMovingBlocks();
+  			rotateMovingBlocks();
+  			drawMovingBlocks();			
+  		}
+	  });                       
+	});	
+</script-->
+</body>
+</html>

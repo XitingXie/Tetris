@@ -1,5 +1,6 @@
 Tetris
 ======
+<h1>Intro</h1>
 <br/>
 The game is designed to demo canvas features in HTML5 and touch features in jquery mobile.
 <br/><br/>
@@ -7,8 +8,7 @@ The game is designed to demo canvas features in HTML5 and touch features in jque
 2. Blocks has simple color without gradients.<br/>
 3. Use keyboard on PC/Mac or touch on mobile devices to move blocks or rotate blocks.<br/>
 <br/><br/>
-
-Continued:<br/>
+<h1>Continued:<h1/>
 1. Add gradients to make the blocks look better.<br/>
 2. New algorithm to score the actions.<br/>
 3. New design to include the scores in the view.<br/>
